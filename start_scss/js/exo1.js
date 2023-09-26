@@ -106,7 +106,7 @@ let chaussures = [
     titre: "Old Skool",
     collector: false,
     taillesDispo: [29, 30, 32],
-    prix: 70,
+    prix: 4000,
     elements: {
       lacets: "rouge",
       corps: "bleu",
@@ -129,33 +129,25 @@ chaussures.forEach((chaussure) => {
 // 2. Log un tableau de toutes les Nikes
 
 console.log("Que les Nike");
-let nikes = [];
-
-chaussures.forEach(function (chaussure) {
-  if (chaussure.marque === "Nike") {
-    nikes.push(chaussure);
-  }
-});
+const nikes = chaussures.filter((chaussure) => chaussure.marque === "Nike");
 
 console.log(nikes);
 
 // 3. Log du prix des Vans "Old Skool"
 console.log("Prix vans");
-chaussures.forEach(function (chaussure) {
-  if (chaussure.marque === "Vans" && chaussure.titre === "Old Skool") {
-    console.log(`Prix des Vans Old Skool : ${chaussure.prix} euros`);
-  }
+const vansOldSkool = chaussures.filter(
+  (chaussure) => chaussure.marque === "Vans" && chaussure.titre === "Old Skool"
+);
+vansOldSkool.forEach((chaussure) => {
+  console.log(`Prix des Vans Old Skool : ${chaussure.prix} euros`);
 });
 
 // 4. Log un tableau de toutes les chaussures collector
 console.log("Chaussure collector");
-let Ccollector = [];
+const Ccollector = chaussures.filter(
+  (chaussure) => chaussure.collector === true
+);
 
-chaussures.forEach(function (chaussure) {
-  if (chaussure.collector === true) {
-    Ccollector.push(chaussure);
-  }
-});
 console.log(Ccollector);
 
 // 5. Log couleur lacets de la vans Sk8
@@ -180,3 +172,32 @@ chaussures.forEach(function (chaussure) {
 });
 
 // 7. Plus compliqué : Log le montant total de Toutes les Nikes
+
+console.log("Prix total");
+
+let total = 0;
+
+chaussures.forEach(function (chaussure) {
+  if (chaussure.marque === "Nike") {
+    total += chaussure.prix;
+  }
+});
+
+console.log(
+  `Le montant total de toutes les chaussures Nike est de : ${total} euros`
+);
+
+// 8. Plus compliqué : Log le montant total de Toutes les paires
+console.log("Prix total");
+
+let stock = 0;
+
+chaussures.forEach(function (chaussure) {
+  if (chaussure.marque) {
+    stock += chaussure.prix;
+  }
+});
+
+console.log(
+  `Le montant total de toutes les chaussures  est de : ${stock} euros`
+);
