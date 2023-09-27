@@ -1,17 +1,18 @@
-<script>
-export default {
-  props: {
-    content: String,
-    href: String,
-    size: String,
-    variant: String
-  },
-  data() {
-    return {
-      className: `button ${this.variant === 'rounded' ? ' -rounted' : ''} ${this.size === 'small' ? '-small' : ''}`
-    }
-  }
-}
+<script setup>
+//export default {
+//  props: {
+//    content: String,
+//    href: String,
+//   size: String,
+//   variant: String
+//  },
+//  data() {
+//   return {
+//     className: `button ${this.variant === 'rounded' ? ' -rounted' : ''} ${this.size === 'small' ? '-small' : ''}`
+//    }
+// }
+//}
+
 </script>
 <template>
   <a v-if="href" :href="href" :class="className">{{ content }}</a>
