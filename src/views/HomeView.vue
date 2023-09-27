@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import MyButton from '@/components/MyButton.vue'
+</script>
 
 <template>
   <main>
-    <h1>bonjour</h1>
+    <MyButton href="href" Size="small" variant="" content="test">ayo</MyButton>
   </main>
 </template>
