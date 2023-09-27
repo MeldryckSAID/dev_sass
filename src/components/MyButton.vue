@@ -33,6 +33,7 @@ export default {
   font-size: $regular-font-size;
   font-weight: 600;
   padding: rem(33) rem(67);
+  text-decoration: none;
   word-wrap: break-word;
 
   &.-rounded {
@@ -40,7 +41,6 @@ export default {
     border-radius: rem(37);
     font-weight: 500;
     padding: rem(26) rem(64);
-    text-decoration: none;
   }
   &.-small {
     font-size: $small-font-size;
