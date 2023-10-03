@@ -17,11 +17,15 @@ export default {
         'Favori'
       ]
     },
-    variant: {
+    color: {
       control: 'select',
-      options: ['basic']
+      options: ['base', 'primary', 'secondary', 'black', 'white']
     },
-    Size: {
+    stroke: {
+      control: 'select',
+      options: ['base', 'primary', 'secondary', 'black', 'white']
+    },
+    size: {
       control: 'select',
       options: ['small', 'regular', 'big']
     }

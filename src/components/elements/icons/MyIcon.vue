@@ -10,7 +10,10 @@ import IconLocalisation from '../icons/IconLocalisation.vue'
 import IconFavori from '../icons/IconFavori.vue'
 
 const props = defineProps({
-  name: String
+  name: String,
+  color: String,
+  stroke: String,
+  size: String,
 })
 const getIcon = computed(() => {
   switch (props.name) {
@@ -32,13 +35,30 @@ const getIcon = computed(() => {
       return IconFavori
 
     default:
-      return IconTooling
+      return IconArrowR
   }
 })
+
+const className = computed(() => ({
+  ' -black': props.color === 'black',
+  ' -primary': props.color === 'primary',
+  ' -white': props.color === 'white',
+  ' -secondary': props.color === 'secondary',
+
+  ' -sblack': props.stroke === 'black',
+  ' -sprimary': props.stroke === 'primary',
+  ' -swhite': props.stroke === 'white',
+  ' -ssecondary': props.stroke === 'secondary',
+ 
+ 
+  ' -small': props.size === 'small',
+  ' -regular': props.size === 'regular',
+  ' -big': props.size === 'big'
+}))
 </script>
 
 <template>
-  <i class="icon">
+  <i :class="className" class="icon">
     <component :is="getIcon" />
   </i>
 </template>
@@ -46,12 +66,56 @@ const getIcon = computed(() => {
 <style lang="scss" scoped>
 .icon {
   align-items: center;
-  background: $white;
   border-radius: 100%;
   box-shadow: 0 0 rem(5) 0 $gray;
   display: inline-flex;
   height: rem(50);
   justify-content: center;
   width: rem(50);
+
+  //background
+  &.-primary {
+    background: #f48e28;
+  }
+  &.-secondary {
+    background: #f5ddc4;
+  }
+
+  &.-white {
+    background: #fff;
+  }
+
+  &.-black {
+    background: #000;
+  }
+
+  //stroke
+
+  &.-sprimary {
+    color: #f48e28;
+  }
+  &.-ssecondary {
+    color: #f5ddc4;
+  }
+
+  &.-swhite {
+    color: #fff;
+  }
+
+  &.-sblack {
+    color: #000;
+  }
+
+  &.-small {
+    svg {
+      scale: 0.5;
+    }
+  }
+  &.-regular {
+    size: 1rem;
+  }
+  &.-big {
+    size: 3rem;
+  }
 }
 </style>
