@@ -12,7 +12,7 @@ import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
     <template #header>
       <nav>
         <ul>
-          <li><a href="#">Nav link 1</a></li>
+          <li><a href="/test">test</a></li>
           <li><a href="#">Nav link 2</a></li>
           <li><a href="#">Nav link 3</a></li>
         </ul>
