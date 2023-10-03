@@ -3,20 +3,17 @@
     <header class="layout__header">
       <slot name="header"></slot>
     </header>
-
     <aside class="layout__aside">
       <slot name="aside"></slot>
     </aside>
     <article class="layout__article">
       <slot></slot>
     </article>
-
     <footer class="layout__footer">
       <slot name="footer"></slot>
     </footer>
   </main>
 </template>
-
 <style lang="scss" scoped>
 .layout {
   display: grid;
@@ -25,23 +22,20 @@
     'article'
     'aside'
     'footer';
-
-  min-height: 100vh;
-
   @include medium-up {
     grid-template:
       'header header header'
-      'aside article article'
+      'article article aside'
       'footer footer footer';
   }
- 
-  &__aside {
-    background: yellow;
-    grid-area: aside;
+  > * {
+    padding: rem(16);
   }
   &__article {
-    background: yellowgreen;
     grid-area: article;
+  }
+  &__aside {
+    grid-area: aside;
   }
   &__footer {
     background: $primary-color;

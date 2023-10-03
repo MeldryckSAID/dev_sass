@@ -1,31 +1,41 @@
 <script setup>
-//a retenir nav>ul>li*4[href=#]{link}
+import MyButton3 from '@/components/MyButton3.vue'
+import MyBackgroundScroll from '../components/MyBackgroundScroll.vue'
 import MyButton from '@/components/MyButton.vue'
-import DefaultLayout from '@/components/layaouts/DefaultLayout.vue'
+import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
 </script>
 
 <template>
-  <main>
-    <DefaultLayout>
-      <template v-slot:header>
-        
-      </template>
-      <h1>Hello WORLDS</h1>
-      <P>Page about</P>
+  <!-- <MyButton > My button</MyButton>
+  <MyButton3>Seconde version</MyButton3> -->
+  <DefaultLayout>
+    <template #header>
+      <nav>
+        <ul>
+          <li><a href="#">Nav link 1</a></li>
+          <li><a href="#">Nav link 2</a></li>
+          <li><a href="#">Nav link 3</a></li>
+        </ul>
+      </nav>
+    </template>
 
-      <template v-slot:aside>
-        <nav>
-          <ul>
-            <li href="#">Nav aside 1</li>
-            <li href="#">Nav aside 2</li>
-            <li href="#">Nav aside 3</li>
-          </ul>
-        </nav>
-      </template>
+    <template #aside>
+      <nav>
+        <ul>
+          <li><a href="#">Aside link 1</a></li>
+          <li><a href="#">Aside link 2</a></li>
+          <li><a href="#">Aside link 3</a></li>
+        </ul>
+      </nav>
+    </template>
 
-      <template v-slot:footer>
-        <MyButton href="/test" Size="rounded" variant="small" content="footer">TEST</MyButton>
-      </template>
-    </DefaultLayout>
-  </main>
+    <MyBackgroundScroll />
+
+    <template #footer> </template>
+  </DefaultLayout>
+
+  <!-- <MyButton size="small" href="/about">My Small Button</MyButton>
+  <MyButton href="/about">My link Button</MyButton>
+  <MyButton variant="rounded" >My rounded Button</MyButton> -->
+  <p></p>
 </template>

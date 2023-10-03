@@ -1,21 +1,20 @@
-<script>
-export default {
-  props: {
-    content: String,
-    href: String,
-    size: String,
-    variant: String
-  },
-  data() {
-    return {
-      className: `button ${this.variant === 'rounded' ? ' -rounted' : ''} ${this.size === 'small' ? '-small' : ''}`
-    }
-  }
+<script setup>
+const props = defineProps({
+  content: String,
+  href: String,
+  size: String,
+  variant: String
+})
+/* J'ai corrigé cette partie après le cours avec une gestion des classes beaucoup plus simple. 
+J'avais oublié qu'on pouvait mettre des objets dans le className */
+const className = {
+  ' -rounded': props.variant === 'rounded',
+  ' -small': props.size === 'small'
 }
 </script>
 <template>
-  <a v-if="href" :href="href" :class="className">{{ content }}</a>
-  <button v-else class="button"><slot></slot></button>
+  <a v-if="href" :href="href" class="button" :class="className"><slot></slot></a>
+  <button v-else :class="className"><slot></slot></button>
 </template>
 
 <style lang="scss" scoped>
@@ -25,15 +24,14 @@ export default {
   border: none;
   border-radius: rem(15);
   box-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
-  color: $white;
   display: inline-block;
+  color: $white;
   font-family: $primary-font-familly;
   font-size: $regular-font-size;
   font-weight: 600;
   padding: rem(33) rem(67);
   text-decoration: none;
   word-wrap: break-word;
-
   &.-rounded {
     background: $primary-color;
     border-radius: rem(37);
