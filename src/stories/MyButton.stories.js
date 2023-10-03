@@ -14,6 +14,9 @@ export default {
     variant: {
       control: 'select',
       options: ['default', 'rounded']
+    },
+    Icon: {
+      control: 'boolean'
     }
   }
 }
@@ -36,7 +39,14 @@ export const PrimaryButton = {
   }
 }
 export const SecondaryButton = {
-...PrimaryButton,
+  ...PrimaryButton,
+  args: {
+    size: 'small',
+    variant: 'rounded'
+  }
+}
+export const ThirdButton = {
+  ...PrimaryButton,
   args: {
     size: 'small',
     variant: 'rounded'

@@ -1,20 +1,27 @@
 <script setup>
 import { computed } from 'vue'
+import MyIcon from '@/components/elements/icons/MyIcon.vue'
 const props = defineProps({
   href: String,
   size: String,
-  variant: String
+  variant: String,
+  Icon: Boolean
 })
 /* J'ai corrigé cette partie après le cours avec une gestion des classes beaucoup plus simple. 
 J'avais oublié qu'on pouvait mettre des objets dans le className */
 const className = computed(() => ({
   ' -rounded': props.variant === 'rounded',
-  ' -small': props.size === 'small'
+  ' -small': props.size === 'small',
+  ' -icon': props.Icon
 }))
 </script>
 <template>
-  <a v-if="href" :href="href" class="button" :class="className"><slot></slot></a>
-  <button v-else class="button" :class="className"><slot></slot></button>
+  <a v-if="href" :href="href" class="button" :class="className"
+    ><slot></slot> <MyIcon v-if="Icon" name="Arrow Rigth" />
+  </a>
+  <button v-else class="button" :class="className">
+    <slot></slot><MyIcon v-if="Icon" name="Arrow Rigth" />
+  </button>
 </template>
 
 <style lang="scss" scoped>
@@ -32,6 +39,10 @@ const className = computed(() => ({
   padding: rem(33) rem(67);
   text-decoration: none;
   word-wrap: break-word;
+  &.-Icon {
+    background: white;
+    stroke: #f48e28;
+  }
   &.-rounded {
     background: $primary-color;
     border-radius: rem(37);
