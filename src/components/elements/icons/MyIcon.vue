@@ -8,6 +8,7 @@ import IconCall from '../icons/IconCall.vue'
 import IconClock from '../icons/IconClock.vue'
 import IconLocalisation from '../icons/IconLocalisation.vue'
 import IconFavori from '../icons/IconFavori.vue'
+import IconNext from '../icons/IconNext.vue'
 
 const props = defineProps({
   name: String,
@@ -33,6 +34,8 @@ const getIcon = computed(() => {
     return IconCall
   case 'Favori':
     return IconFavori
+  case 'Next':
+    return IconNext
 
   default:
     return IconArrowR

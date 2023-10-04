@@ -49,6 +49,7 @@ export const ThirdButton = {
   ...PrimaryButton,
   args: {
     size: 'small',
-    variant: 'rounded'
+    variant: 'rounded',
+    icon:'true'
   }
 }

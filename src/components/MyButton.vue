@@ -5,22 +5,21 @@ const props = defineProps({
   href: String,
   size: String,
   variant: String,
-  Icon: Boolean
+  icon: Boolean
 })
 /* J'ai corrigé cette partie après le cours avec une gestion des classes beaucoup plus simple. 
 J'avais oublié qu'on pouvait mettre des objets dans le className */
 const className = computed(() => ({
   ' -rounded': props.variant === 'rounded',
   ' -small': props.size === 'small',
-  ' -icon': props.Icon
+  ' -icon': props.icon
 }))
 </script>
 <template>
-  <a v-if="href" :href="href" class="button" :class="className"
-  ><slot></slot> <MyIcon v-if="Icon" name="Arrow Rigth" />
+  <a v-if="href" :href="href" class="button" :class="className"><slot></slot> <MyIcon v-if="icon" name="Next" stroke="primary" color="white" />
   </a>
   <button v-else class="button" :class="className">
-    <slot></slot><MyIcon v-if="Icon" name="Arrow Rigth" />
+    <slot></slot><MyIcon v-if="icon" name="Next" stroke="primary" color="white" />
   </button>
 </template>
 
@@ -39,10 +38,7 @@ const className = computed(() => ({
   padding: rem(33) rem(67);
   text-decoration: none;
   word-wrap: break-word;
-  &.-icon {
-    gap: 200px;
-    scale: 2rem;
-  }
+
   &.-rounded {
     background: $primary-color;
     border-radius: rem(37);
@@ -55,8 +51,10 @@ const className = computed(() => ({
     font-weight: 400;
   }
   &.-icon {
-    gap: 200px;
-    scale: 2rem;
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
 </style>

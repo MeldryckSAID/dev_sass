@@ -14,7 +14,8 @@ export default {
         'Clock',
         'Localisation',
         'Call',
-        'Favori'
+        'Favori',
+        'Next'
       ]
     },
     color: {
