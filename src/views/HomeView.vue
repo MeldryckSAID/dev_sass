@@ -19,6 +19,9 @@ import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
           <li><a href="#">Nav link 3</a></li>
         </ul>
       </nav>
+      <div class="test">
+        <h1>ON VAS TESTE LE AMEND</h1>
+      </div>
     </template>
 
     <template #aside>
@@ -29,7 +32,12 @@ import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
           <li><a href="#">Aside link 3</a></li>
         </ul>
       </nav>
-      <Mycard title="JOOOORDAAANN!!!!" description="T'es mort" buttonLabel="K.O"   imageSrc="/dodo.jpeg" ></Mycard>
+      <Mycard
+        title="JOOOORDAAANN!!!!"
+        description="T'es mort"
+        buttonLabel="K.O"
+        imageSrc="/dodo.jpeg"
+      ></Mycard>
     </template>
 
     <MyBackgroundScroll />
@@ -42,3 +50,11 @@ import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
   <MyButton variant="rounded" >My rounded Button</MyButton> -->
   <p></p>
 </template>
+
+<style>
+.test {
+  color: aqua;
+  background-color: black;
+  width: 5rem;
+}
+</style>

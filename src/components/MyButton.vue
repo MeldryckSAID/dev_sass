@@ -39,10 +39,7 @@ const className = computed(() => ({
   padding: rem(33) rem(67);
   text-decoration: none;
   word-wrap: break-word;
-  &.-icon {
-    gap: 200px;
-    scale: 2rem;
-  }
+
   &.-rounded {
     background: $primary-color;
     border-radius: rem(37);
@@ -53,6 +50,10 @@ const className = computed(() => ({
     font-size: $small-font-size;
     padding: rem(14) rem(29);
     font-weight: 400;
+  }
+  &.-icon {
+    gap: 200px;
+    scale: 2rem;
   }
 }
 </style>
