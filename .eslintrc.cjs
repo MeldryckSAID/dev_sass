@@ -10,7 +10,7 @@ module.exports = {
     'plugin:storybook/recommended'
   ],
   rules: {
-    'no-console': 'error',
+    'no-console': 'off',
     indent: ['error', 2],
     'vue/html-indent': ['error', 2]
   },
