@@ -1,5 +1,6 @@
 <script setup>
 import MyButton3 from '@/components/MyButton3.vue'
+import Mycard from '../components/elements/MyCard.vue'
 import MyBackgroundScroll from '../components/MyBackgroundScroll.vue'
 import MyButton from '@/components/MyButton.vue'
 import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
@@ -8,6 +9,7 @@ import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
 <template>
   <!-- <MyButton > My button</MyButton>
   <MyButton3>Seconde version</MyButton3> -->
+
   <DefaultLayout>
     <template #header>
       <nav>
@@ -27,6 +29,7 @@ import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
           <li><a href="#">Aside link 3</a></li>
         </ul>
       </nav>
+      <Mycard title="JOOOORDAAANN!!!!" description="T'es mort" buttonLabel="K.O"   imageSrc="/dodo.jpeg" ></Mycard>
     </template>
 
     <MyBackgroundScroll />

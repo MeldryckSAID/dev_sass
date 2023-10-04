@@ -20,7 +20,7 @@ const className = computed(() => ({
     ><slot></slot> <MyIcon v-if="Icon" name="Arrow Rigth" />
   </a>
   <button v-else class="button" :class="className">
-    <slot></slot><MyIcon v-if="Icon" name="Arrow Rigth" />
+    <slot></slot><MyIcon v-if="Icon" name="Arrow Rigth" color="white" stroke="primary" />
   </button>
 </template>
 
@@ -39,9 +39,9 @@ const className = computed(() => ({
   padding: rem(33) rem(67);
   text-decoration: none;
   word-wrap: break-word;
-  &.-Icon {
-    background: white;
-    stroke: #f48e28;
+  &.-icon {
+    gap: 200px;
+    scale: 2rem;
   }
   &.-rounded {
     background: $primary-color;
