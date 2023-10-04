@@ -14,7 +14,6 @@ defineProps({
     <div class="card__image">
       <img :src="imageSrc" :alt="imageAlt" />
     </div>
-
     <div class="card__content">
       <h2 size="small">{{ title }}</h2>
       <p>{{ description }}</p>
