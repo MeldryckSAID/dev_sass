@@ -17,10 +17,10 @@ const className = computed(() => ({
 </script>
 <template>
   <a v-if="href" :href="href" class="button" :class="className"
-    ><slot></slot> <MyIcon v-if="Icon" name="Arrow Rigth" />
+  ><slot></slot> <MyIcon v-if="Icon" name="Arrow Rigth" />
   </a>
   <button v-else class="button" :class="className">
-    <slot></slot><MyIcon v-if="Icon" name="Arrow Rigth" color="white" stroke="primary" />
+    <slot></slot><MyIcon v-if="Icon" name="Arrow Rigth" />
   </button>
 </template>
 
@@ -39,7 +39,10 @@ const className = computed(() => ({
   padding: rem(33) rem(67);
   text-decoration: none;
   word-wrap: break-word;
-
+  &.-icon {
+    gap: 200px;
+    scale: 2rem;
+  }
   &.-rounded {
     background: $primary-color;
     border-radius: rem(37);

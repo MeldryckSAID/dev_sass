@@ -17,25 +17,25 @@ const props = defineProps({
 })
 const getIcon = computed(() => {
   switch (props.name) {
-    case 'Arrow Rigth':
-      return IconArrowR
-    case 'Market':
-      return IconMarket
-    case 'Arrow Left':
-      return IconArrowL
-    case 'Search':
-      return IconSearch
-    case 'Clock':
-      return IconClock
-    case 'Localisation':
-      return IconLocalisation
-    case 'Call':
-      return IconCall
-    case 'Favori':
-      return IconFavori
+  case 'Arrow Rigth':
+    return IconArrowR
+  case 'Market':
+    return IconMarket
+  case 'Arrow Left':
+    return IconArrowL
+  case 'Search':
+    return IconSearch
+  case 'Clock':
+    return IconClock
+  case 'Localisation':
+    return IconLocalisation
+  case 'Call':
+    return IconCall
+  case 'Favori':
+    return IconFavori
 
-    default:
-      return IconArrowR
+  default:
+    return IconArrowR
   }
 })
 
