@@ -7,8 +7,7 @@ const props = defineProps({
   variant: String,
   icon: Boolean
 })
-/* J'ai corrigé cette partie après le cours avec une gestion des classes beaucoup plus simple. 
-J'avais oublié qu'on pouvait mettre des objets dans le className */
+
 const className = computed(() => ({
   ' -rounded': props.variant === 'rounded',
   ' -small': props.size === 'small',

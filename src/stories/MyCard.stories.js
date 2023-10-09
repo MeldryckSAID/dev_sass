@@ -4,17 +4,26 @@ export default {
   title: 'Card/Single-Card',
   component: MyCard,
   argTypes: {
-    name: {
-      control: 'select',
-      options: [
-        'wait',
-      ]
+    imageSRC: {
+      control: 'text'
     },
-    
+    title: {
+      control: 'text'
+    },
+    description: {
+      control: 'text'
+    },
+    buttonLabel: {
+      control: 'text'
+    },
+    variant: {
+      control: 'select',
+      options: ['default', 'small']
+    }
   }
 }
 
-export const Icon = {
+export const Big_card = {
   render: (args) => {
     return {
       components: {
@@ -27,6 +36,26 @@ export const Icon = {
     }
   },
   args: {
-    name: 'basic'
+    name: 'basic',
+    imageSRC: '/webp/ImgDelivery.webp'
+  }
+}
+
+export const Small_card = {
+  render: (args) => {
+    return {
+      components: {
+        MyCard
+      },
+      setup() {
+        return { args }
+      },
+      template: `<MyCard v-bind="args" />`
+    }
+  },
+  args: {
+    name: 'basic', 
+    
+       
   }
 }
