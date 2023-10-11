@@ -29,6 +29,10 @@ export default {
     size: {
       control: 'select',
       options: ['small', 'regular', 'big']
+    },
+    fill: {
+      control: 'select',
+      options: ['base', 'yellow', 'black']
     }
   }
 }

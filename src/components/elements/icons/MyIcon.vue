@@ -15,6 +15,7 @@ const props = defineProps({
   color: String,
   stroke: String,
   size: String,
+  fill: String,
 })
 const getIcon = computed(() => {
   switch (props.name) {
@@ -47,16 +48,22 @@ const className = computed(() => ({
   ' -primary': props.color === 'primary',
   ' -white': props.color === 'white',
   ' -secondary': props.color === 'secondary',
-
+  ' -sans': props.color === 'base',
+  
   ' -sblack': props.stroke === 'black',
   ' -sprimary': props.stroke === 'primary',
   ' -swhite': props.stroke === 'white',
   ' -ssecondary': props.stroke === 'secondary',
- 
- 
+  ' -ssans': props.stroke === 'base',
+
+
   ' -small': props.size === 'small',
   ' -regular': props.size === 'regular',
-  ' -big': props.size === 'big'
+  ' -big': props.size === 'big',
+
+  ' -fyellow': props.fill === 'yellow',
+  ' -fblack': props.fill === 'black',
+  ' -fsans': props.fill === 'base'
 }))
 </script>
 
@@ -91,6 +98,20 @@ const className = computed(() => ({
   &.-black {
     background: #000;
   }
+  &.-sans {
+    background: none;
+  }
+
+  //fill
+  &-.fyellow {
+    fill: yellow;
+  }
+  &-.fblack {
+    fill: #000;
+  }
+  &-.fsans {
+    fill: none;
+  }
 
   //stroke
 
@@ -107,6 +128,10 @@ const className = computed(() => ({
 
   &.-sblack {
     color: #000;
+  }
+
+  &.-ssans {
+    color: none;
   }
 
   &.-small {

@@ -13,17 +13,38 @@ export default {
     description: {
       control: 'text'
     },
+    price: {
+      control: 'text'
+    },
+    prices: {
+      control: 'boolean'
+    },
     buttonLabel: {
       control: 'text'
     },
     variant: {
       control: 'select',
-      options: ['default', 'small']
+      options: ['default', 'small', 'recette']
+    },
+    Icon: {
+      control: 'boolean'
+    },
+    favori: {
+      control: 'boolean'
+    },
+    btn: {
+      control: 'boolean'
+    },
+    note: {
+      control: 'text'
+    },
+    notes: {
+      control: 'boolean'
     }
   }
 }
 
-export const Big_card = {
+export const Card_prestation = {
   render: (args) => {
     return {
       components: {
@@ -36,12 +57,12 @@ export const Big_card = {
     }
   },
   args: {
-    name: 'basic',
-    imageSRC: '/webp/ImgDelivery.webp'
+    imageSRC: '/ImgDelivery.webp',
+    btn: false
   }
 }
 
-export const Small_card = {
+export const Menu_card = {
   render: (args) => {
     return {
       components: {
@@ -54,8 +75,31 @@ export const Small_card = {
     }
   },
   args: {
-    name: 'basic', 
-    
-       
+    variant: 'small',
+    prices: true,
+    icon: true,
+    imageSRC: '/burger.png'
+  }
+}
+export const Card_recette = {
+  ...MyCard,
+  render: (args) => {
+    return {
+      components: {
+        MyCard
+      },
+      setup() {
+        return { args }
+      },
+      template: `<MyCard v-bind="args" />`
+    }
+  },
+  args: {
+    variant: 'recette',
+    btn: 'true',
+    imageSRC: '/salade.png',
+    prices: true,
+    favori: true,
+    notes: true
   }
 }
