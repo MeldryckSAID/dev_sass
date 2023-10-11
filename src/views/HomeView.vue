@@ -1,7 +1,8 @@
 <script setup>
 //import MyButton3 from '@/components/MyButton3.vue'
 import { onMounted, ref, computed } from 'vue'
-import axios from 'axios'
+
+import {client} from '../utils/axios.js'
 import MyBackgroundScroll from '../components/MyBackgroundScroll.vue'
 //import MyButton from '@/components/MyButton.vue'
 import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
@@ -12,9 +13,7 @@ onMounted(async () => {
   console.log(recipes.value)
 })
 
-const client = axios.create({
-  baseURL: import.meta.env.VITE_API_URL
-})
+
 const recipes = ref([])
 
 const getRecipes = async () => {
@@ -50,7 +49,7 @@ console.log(hasGoalId)
       <nav>
         <ul>
           <li><a href="/test">test</a></li>
-          <li><a href="#">Nav link 2</a></li>
+          <li><a href="/recipes">recipes</a></li>
           <li><a href="#">Nav link 3</a></li>
         </ul>
       </nav>
