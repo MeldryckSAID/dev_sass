@@ -7,26 +7,47 @@ const response = [
     id: '1',
     description: 'Description de la card',
     title: '100% Gratuit',
-    imageSrc: 'http://placekitten.com/300/150',
+    imageSrc: '/salade.png',
     imageAlt: 'Image de chat',
-    buttonLabel: 'Bouton de la card'
+    buttonLabel: 'Bouton de la card',
+    variant: 'recette',
+    favori: true,
+    btn: true,
+    prices: true,
+    price: '15.00',
+    note: '5',
+    notes: true
   },
 
   {
     id: '3',
     description: 'Description de la card',
-    title: 'Retours gratuits',
-    imageSrc: 'http://placekitten.com/300/150',
+    title: 'Retours de cochhon',
+    imageSrc: '/salade.png',
     imageAlt: 'Image de chat',
-    buttonLabel: 'Bouton de la card'
+    buttonLabel: 'Bouton de la card',
+    variant: 'recette',
+    favori: true,
+    btn: true,
+    prices: true,
+    price: '15.00',
+    note: '4.9',
+    notes: true
   },
   {
     id: '2',
     description: 'Description de la card',
     title: 'Retours gratuits',
-    imageSrc: 'http://placekitten.com/300/150',
+    imageSrc: '/salade.png',
     imageAlt: 'Image de chat',
-    buttonLabel: 'Bouton de la card'
+    buttonLabel: 'Bouton de la card',
+    variant: 'recette',
+    favori: true,
+    btn: true,
+    prices: true,
+    price: '15.00',
+    note: '8',
+    notes: true
   }
 ]
 

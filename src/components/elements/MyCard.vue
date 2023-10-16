@@ -8,12 +8,12 @@ const props = defineProps({
   imageSrc: String,
   title: String,
   description: String,
-  price: String,
+  btn: Boolean,
   buttonLabel: String,
   variant: String,
   icon: Boolean,
   favori: Boolean,
-  btn: Boolean,
+  price: String,
   prices: Boolean,
   notes: Boolean,
   note: String
@@ -53,7 +53,7 @@ const className = computed(() => ({
 .card {
   max-width: rem(450);
   border-radius: rem(30);
-  border: rem(1) solid ;
+  border: rem(1) solid;
 
   position: relative;
   &__content {
@@ -81,6 +81,12 @@ const className = computed(() => ({
     justify-content: center;
     background-color: none;
     padding: none;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      max-width: rem(485);
+    }
   }
   &__title {
     font-family: $primary-font-familly;
