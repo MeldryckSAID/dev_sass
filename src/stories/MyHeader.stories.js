@@ -1,7 +1,7 @@
 import MyHeader from '../components/elements/MyHeader.vue'
 
 export default {
-  title: 'Header/MyHeader',
+  title: 'Layout/MyHeader',
   component: MyHeader,
   argTypes: {
     theme: {

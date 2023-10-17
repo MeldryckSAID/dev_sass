@@ -1,7 +1,7 @@
 import MyBackDelivery from '../components/elements/MyBackDelivery.vue'
 
 export default {
-  title: 'Deliery/MyBackDelivery',
+  title: 'elements/MyBackDelivery',
   component: MyBackDelivery,
   argTypes: {
     text_Back: {

@@ -20,7 +20,8 @@ const props = defineProps({
 })
 
 const className = computed(() => ({
-  ' -small': props.variant === 'small',
+  ' card': props.variant === 'presta',
+  ' -small': props.variant === 'menu',
   ' -recette': props.variant === 'recette'
 }))
 </script>
@@ -34,7 +35,7 @@ const className = computed(() => ({
         <h2 class="title" size="small">{{ title }}</h2>
         <div class="like">
           <MyIcon v-if="favori" color="none" name="Favori" stroke="primary" />
-          <p class="note" v-if="notes">${{ note }}</p>
+          <p class="note" v-if="notes">{{ note }}</p>
         </div>
       </div>
       <p>{{ description }}</p>
@@ -83,8 +84,7 @@ const className = computed(() => ({
     padding: none;
     img {
       object-fit: cover;
-      height: 100%;
-      width: 100%;
+     
       max-width: rem(485);
     }
   }
@@ -116,7 +116,6 @@ const className = computed(() => ({
       bottom: 0;
       left: rem(-15);
       transform: translate(50%, 80%);
-
       gap: 50px;
     }
   }

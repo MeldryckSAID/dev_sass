@@ -1,7 +1,7 @@
-import MyCards from '../components/elements/MyCards.vue'
+import MyCards from '../components/elements/cards/MyCards.vue'
 
 export default {
-  title: 'Components/MyCards',
+  title: 'Cards/Components/MyCards',
   component: MyCards
 }
 
@@ -15,26 +15,7 @@ export const Cards = {
     }
   },
   args: [
-    {
-      description: 'Description de la card',
-      title: 'Titre de la card',
-      imageSrc: 'http://placekitten.com/300/150',
-      imageAlt: 'Image de chat',
-      buttonLabel: 'Bouton de la card'
-    },
-    {
-      description: 'Description de la card',
-      title: 'Titre de la card',
-      imageSrc: 'http://placekitten.com/300/150',
-      imageAlt: 'Image de chat',
-      buttonLabel: 'Bouton de la card'
-    },
-    {
-      description: 'Description de la card',
-      title: 'Titre de la card',
-      imageSrc: 'http://placekitten.com/300/150',
-      imageAlt: 'Image de chat',
-      buttonLabel: 'Bouton de la card'
-    }
+  
   ]
 }
+

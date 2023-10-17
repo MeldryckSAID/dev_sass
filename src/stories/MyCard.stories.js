@@ -1,7 +1,7 @@
 import MyCard from '../components/elements/MyCard.vue'
 
 export default {
-  title: 'Card/Single-Card',
+  title: 'elements/Card/Single-Card',
   component: MyCard,
   argTypes: {
     imageSRC: {
@@ -24,7 +24,7 @@ export default {
     },
     variant: {
       control: 'select',
-      options: ['default', 'small', 'recette']
+      options: ['presta', 'menu', 'recette']
     },
     Icon: {
       control: 'boolean'

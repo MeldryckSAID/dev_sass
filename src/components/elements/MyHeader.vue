@@ -6,7 +6,6 @@
       </div>
       <div class="header__nav">
         <nav>
-          <MyIcon name="menu open" />
           <ul>
             <li>Home</li>
             <li>Menu</li>
