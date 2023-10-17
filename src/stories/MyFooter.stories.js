@@ -15,7 +15,7 @@ export default {
   }
 }
 
-export const Header = {
+export const Footer = {
   render: (args) => {
     return {
       components: {

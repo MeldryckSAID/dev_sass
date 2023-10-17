@@ -49,7 +49,7 @@ import MySocialIcon from '../elements/icons/resaux/MySocialIcon.vue'
         <p class="footer__link">+0123 456 7891</p>
         <div class="footer__section4-input">
           <input type="text" placeholder="Enter your email..." />
-          <MyIcon name="right arrow" stroke="white" color="orange" size="small"></MyIcon>
+          <MyIcon name="Next" stroke="white" color="primary" size="regular" />
         </div>
       </div>
     </div>
