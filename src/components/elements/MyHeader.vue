@@ -15,8 +15,11 @@
         </nav>
       </div>
       <div class="header__schearbar">
-        <MyIcon name="Search" />
-        <MyIcon name="Market" />
+        <div class="__search">
+          <MyIcon name="Search" />
+          <input placeholder="Search" type="text" />
+          <MyIcon name="Market" />
+        </div>
       </div>
     </div>
   </header>
@@ -27,7 +30,9 @@ import { computed } from 'vue'
 import MyIcon from '../elements/icons/MyIcon.vue'
 const props = defineProps({
   imageAlt: String,
-  imageSrc: String
+  imageSrc: String,
+  theme: String,
+  size:Boolean
 })
 const className = computed(() => ({
   ' -smart': props.size === 'smartphone',
@@ -40,26 +45,80 @@ const className = computed(() => ({
 
 <style lang="scss">
 .Top__header {
-  background-color: red;
+  background-color: white;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
   .header__nav {
-    background-color: aqua;
-
     ul {
       list-style: none;
+      font-family: $primary-font-familly;
       display: flex;
+      justify-content: space-evenly;
+      margin: 0;
+      padding: 10px;
+      gap: 25px;
     }
-    li {
-      display: inline;
-    }
+  }
+  ::placeholder {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: black;
   }
   .header__schearbar {
-    border-radius: 10px;
-    opacity: 0.3;
-    background: var(--White, #fff);
-    box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.15);
+    input {
+      border: none;
+      padding-inline: 10px;
+      font-family: $primary-font-familly;
+      font-size: 18px;
+      font-style: normal;
+    }
+    .__search {
+      border-bottom: 1px solid;
+      border-radius: 10px;
+      box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.15);
+      padding: 5px;
+    }
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25px;
   }
+}
+
+.Top__header.-dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+@media screen and (max-width: 768px) {
+  /* Styles pour les écrans dont la largeur est de 768 pixels ou moins */
+  .Top__header {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+
+<style scoped>
+:root {
+  --text-color-light: black;
+  --background-color-light: white;
+
+  --text-color-dark: white;
+  --background-color-dark: black;
 }
 </style>
