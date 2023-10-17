@@ -15,12 +15,14 @@ export default {
         'Localisation',
         'Call',
         'Favori',
-        'Next'
+        'Next',
+        'Menu close',
+        'Menu open'
       ]
     },
     color: {
       control: 'select',
-      options: ['base', 'primary', 'secondary', 'black', 'white']
+      options: ['base', 'primary', 'secondary', 'black', 'white','none']
     },
     stroke: {
       control: 'select',

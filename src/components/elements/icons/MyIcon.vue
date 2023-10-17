@@ -8,6 +8,8 @@ import IconCall from '../icons/IconCall.vue'
 import IconClock from '../icons/IconClock.vue'
 import IconLocalisation from '../icons/IconLocalisation.vue'
 import IconFavori from '../icons/IconFavori.vue'
+import IconMenuOpen from '../icons/IconMenuOpen.vue'
+import IconMenuClose from '../icons/IconMenuClose.vue'
 import IconNext from '../icons/IconNext.vue'
 
 const props = defineProps({
@@ -35,8 +37,12 @@ const getIcon = computed(() => {
     return IconCall
   case 'Favori':
     return IconFavori
+  case 'Menu close':
+    return IconMenuClose
   case 'Next':
     return IconNext
+  case 'Menu open':
+    return IconMenuOpen
 
   default:
     return IconArrowR
@@ -48,7 +54,7 @@ const className = computed(() => ({
   ' -primary': props.color === 'primary',
   ' -white': props.color === 'white',
   ' -secondary': props.color === 'secondary',
-  ' -sans': props.color === 'base',
+  ' -cnone': props.color === 'none',
   
   ' -sblack': props.stroke === 'black',
   ' -sprimary': props.stroke === 'primary',
@@ -98,8 +104,9 @@ const className = computed(() => ({
   &.-black {
     background: #000;
   }
-  &.-sans {
+  &.-cnone {
     background: none;
+    box-shadow: none;
   }
 
   //fill
@@ -134,16 +141,23 @@ const className = computed(() => ({
     color: none;
   }
 
-  &.-small {
+&.-small {
     svg {
       scale: 0.5;
     }
+    height: rem(25);
+    width: rem(25);
   }
   &.-regular {
-    size: 1rem;
+    height: rem(50);
+    width: rem(50);
   }
   &.-big {
-    size: 3rem;
+    svg {
+      scale: 1.5;
+    }
+    height: rem(100);
+    width: rem(100);
   }
 }
 </style>

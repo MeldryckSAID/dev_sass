@@ -33,7 +33,7 @@ const className = computed(() => ({
       <div class="hfavori">
         <h2 class="title" size="small">{{ title }}</h2>
         <div class="like">
-          <MyIcon v-if="favori" name="Favori" stroke="primary" />
+          <MyIcon v-if="favori" color="none" name="Favori" stroke="primary" />
           <p class="note" v-if="notes">${{ note }}</p>
         </div>
       </div>

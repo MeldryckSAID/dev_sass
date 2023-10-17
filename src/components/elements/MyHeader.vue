@@ -6,6 +6,7 @@
       </div>
       <div class="header__nav">
         <nav>
+          <MyIcon name="menu open" />
           <ul>
             <li>Home</li>
             <li>Menu</li>
@@ -16,9 +17,9 @@
       </div>
       <div class="header__schearbar">
         <div class="__search">
-          <MyIcon name="Search" />
+          <MyIcon color="none" name="Search" />
           <input placeholder="Search" type="text" />
-          <MyIcon name="Market" />
+          <MyIcon color="none" name="Market" />
         </div>
       </div>
     </div>
@@ -32,7 +33,7 @@ const props = defineProps({
   imageAlt: String,
   imageSrc: String,
   theme: String,
-  size:Boolean
+  size: Boolean
 })
 const className = computed(() => ({
   ' -smart': props.size === 'smartphone',
@@ -110,15 +111,5 @@ const className = computed(() => ({
     flex-direction: column;
     gap: 10px;
   }
-}
-</style>
-
-<style scoped>
-:root {
-  --text-color-light: black;
-  --background-color-light: white;
-
-  --text-color-dark: white;
-  --background-color-dark: black;
 }
 </style>
