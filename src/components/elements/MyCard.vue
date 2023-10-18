@@ -55,8 +55,12 @@ const className = computed(() => ({
 <style lang="scss">
 .card {
   max-width: rem(450);
+  height: rem(350);
   border-radius: rem(30);
   border: rem(1) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   position: relative;
   &__content {
@@ -84,7 +88,7 @@ const className = computed(() => ({
     justify-content: center;
     background-color: none;
     padding: none;
-    margin-top: rem(-75);
+
     img {
       object-fit: cover;
       max-width: rem(485);
@@ -107,7 +111,10 @@ const className = computed(() => ({
     border-radius: rem(30);
     border: rem(2) solid $gray;
     height: 367px;
+
     .card__image {
+      margin-top: rem(-75);
+
       img {
         width: 90%;
         padding: 0em;
@@ -125,7 +132,6 @@ const className = computed(() => ({
     max-width: rem(485);
     border-radius: rem(30);
     border: rem(2) solid $gray;
-    
 
     .hfavori {
       display: flex;

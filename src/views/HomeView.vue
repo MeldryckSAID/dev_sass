@@ -1,16 +1,19 @@
 <script setup>
 import MyHeader from '../components/elements/MyHeader.vue'
+import MyFooter from '../components/layouts/MyFooter.vue'
 import MyBackDelivery from '../components/elements/MyBackDelivery.vue'
 import MyTitle from '../components/elements/Mytitle.vue'
 import MyButton from '../components/MyButton.vue'
 import MyCardsMenu from '../components/elements/cards/MyCardsMenu.vue'
 import MyCards from '../components/elements/cards/MyCards.vue'
+import MyCardsPresta from '../components/elements/cards/MyCardsPresta.vue'
 import MyIcon from '../components/elements/icons/MyIcon.vue'
 </script>
 
 <template>
-  <MyHeader imageSrc="/public/logo.png" />
-
+  <header>
+    <MyHeader imageSrc="/public/logo.png" />
+  </header>
   <section class="section__1">
     <div class="section_left">
       <MyBackDelivery text_Back="Bike Delivery" image-src="/public/livraison.png" />
@@ -60,11 +63,23 @@ import MyIcon from '../components/elements/icons/MyIcon.vue'
     </div>
     <MyCards />
     <div class="section__button">
-      <MyButton iconr="true" color="primary" variant="rounded" size="small" tcolor="white">See More Product</MyButton>
+      <MyButton iconr="true" color="primary" variant="rounded" size="small" tcolor="white"
+        >See More Product</MyButton
+      >
     </div>
   </section>
 
+  <section class="section__3">
+    <div class="section__title">
+      <p>Services</p>
+      <MyTitle el="h3" size="large">Why Choose Our Favorite Food</MyTitle>
+    </div>
+    <MyCardsPresta />
+  </section>
 
+  <footer>
+    <MyFooter/>
+  </footer>
 </template>
 
 <style lang="scss">
@@ -115,6 +130,7 @@ p {
   align-items: center;
   flex-direction: column;
   padding: 5%;
+  padding-bottom: none;
   p {
     color: $primary-color;
   }
@@ -124,7 +140,26 @@ p {
     flex-direction: column;
     padding: 10%;
   }
-  .section__button{
+  .section__button {
+    padding: 1%;
+  }
+}
+.section__3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2%;
+
+  .section__title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+    p {
+      color: $primary-color;
+    }
+  }
+  .section__button {
     padding: 1%;
   }
 }
