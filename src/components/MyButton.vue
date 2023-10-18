@@ -36,7 +36,7 @@ const className = computed(() => ({
   </a>
   <button v-else class="button tcolor" :class="className">
     <MyIcon v-if="iconl" name="Play" stroke="primary" color="white" />
-    <slot ></slot><MyIcon v-if="iconr" name="Next" stroke="primary" color="white" />
+    <slot></slot><MyIcon v-if="iconr" name="Next" stroke="primary" color="white" />
   </button>
 </template>
 
@@ -54,7 +54,7 @@ const className = computed(() => ({
   border-radius: rem(15);
   box-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
   display: inline-block;
-
+  height: fit-content;
   font-family: $primary-font-familly;
   font-size: $regular-font-size;
   font-weight: 600;
@@ -100,7 +100,9 @@ const className = computed(() => ({
     background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
   }
   &.-snone {
-    background: none;
+    background-color: none;
+    border: none;
+    box-shadow: none;
   }
 }
 </style>

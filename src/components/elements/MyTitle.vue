@@ -4,7 +4,8 @@ import { computed } from 'vue'
 const props = defineProps({
   el: String,
   size: String,
-  color: String
+  color: String,
+  strong: String
 })
 
 const className = computed(() => ({
@@ -20,7 +21,12 @@ const className = computed(() => ({
   ' -swhite': props.color === 'white',
   ' -ssecondary': props.color === 'secondary',
   ' -sgray': props.color === 'gray',
-  ' -cnone': props.color === 'none'
+  ' -cnone': props.color === 'none',
+
+  //strong font-weigt
+  ' -strong': props.strong === 'strong',
+  ' -mid': props.strong === 'mid',
+  ' -less': props.strong === 'less'
 }))
 </script>
 <template>
@@ -60,10 +66,10 @@ const className = computed(() => ({
     font-size: rem(9);
   }
   &.-sprimary {
-    color:  $primary-color;
+    color: $primary-color;
   }
   &.-ssecondary {
-    color:  $secondary-color;
+    color: $secondary-color;
   }
 
   &.-swhite {
@@ -79,6 +85,17 @@ const className = computed(() => ({
 
   &.-ssans {
     color: none;
+  }
+
+  &.-strong {
+    font-weight: 700;
+  }
+
+  &.-mid {
+    font-weight: 400;
+  }
+  &.-less {
+    font-weight: 200;
   }
 }
 @include x-large-up {

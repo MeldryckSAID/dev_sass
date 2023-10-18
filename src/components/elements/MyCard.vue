@@ -40,7 +40,9 @@ const className = computed(() => ({
       </div>
       <p>{{ description }}</p>
       <div class="card__button">
-        <MyButton v-if="btn" variant="rounded" size="small">{{ buttonLabel }}</MyButton>
+        <MyButton v-if="btn" tcolor="white" color="primary" variant="rounded" size="small">{{
+          buttonLabel
+        }}</MyButton>
         <p class="dollar" v-if="prices">${{ price }}</p>
       </div>
       <div class="card__icon">
@@ -58,9 +60,9 @@ const className = computed(() => ({
 
   position: relative;
   &__content {
-    padding: rem(20) rem(10);
+    padding: rem(20) rem(20);
     > * + * {
-      margin-top: rem(20);
+      margin-top: rem(30);
     }
     h2 {
       font-family: $primary-font-familly;
@@ -82,9 +84,9 @@ const className = computed(() => ({
     justify-content: center;
     background-color: none;
     padding: none;
+    margin-top: rem(-75);
     img {
       object-fit: cover;
-     
       max-width: rem(485);
     }
   }
@@ -114,8 +116,8 @@ const className = computed(() => ({
     .card__icon {
       position: absolute;
       bottom: 0;
-      left: rem(-15);
-      transform: translate(50%, 80%);
+      left: 50%;
+      transform: translate(-50%, 50%);
       gap: 50px;
     }
   }
@@ -123,7 +125,7 @@ const className = computed(() => ({
     max-width: rem(485);
     border-radius: rem(30);
     border: rem(2) solid $gray;
-    height: rem(485);
+    
 
     .hfavori {
       display: flex;
@@ -157,7 +159,6 @@ const className = computed(() => ({
     }
     .card__button {
       display: flex;
-
       justify-content: space-between;
     }
   }

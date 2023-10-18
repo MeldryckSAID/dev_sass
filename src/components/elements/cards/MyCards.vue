@@ -75,7 +75,7 @@ const response = [
     notes: true
   },
   {
-    id: '5',
+    id: '6',
     title: 'Green Salad',
     imageSrc: '/recette/bol.png',
     imageAlt: 'Image Green Salad',
@@ -102,7 +102,7 @@ const cards = reactive(response)
 <style lang="scss" scoped>
 .cards {
   display: grid;
-  gap: rem(20);
+  gap: 6.25rem;
   grid-template-columns: repeat(3, 1fr);
 }
 </style>

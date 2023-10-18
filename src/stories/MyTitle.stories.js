@@ -15,6 +15,10 @@ export default {
     color: {
       control: 'select',
       options: ['black', 'primary', 'secondary', 'black', 'gray', 'white', 'none']
+    },
+    strong: {
+      control: 'select',
+      options: ['less', 'mid', 'strong']
     }
   }
 }
