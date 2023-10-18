@@ -63,7 +63,8 @@ const cards = reactive(response)
 <style lang="scss" scoped>
 .cards {
   display: grid;
-  gap: rem(20);
+  gap: rem(40);
   grid-template-columns: repeat(2, 1fr);
+ 
 }
 </style>

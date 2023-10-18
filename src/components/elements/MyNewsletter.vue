@@ -22,7 +22,7 @@ const className = computed(() => ({
       <p class="Newletter__text">{{ paragraphe }}</p>
       <div class="Newletter__form">
         <input placeholder="Type your email....." type="text" />
-        <MyButton  variant="rounded">SUBCRIBE</MyButton>
+        <MyButton variant="rounded">SUBCRIBE</MyButton>
       </div>
     </div>
   </div>
@@ -38,11 +38,13 @@ const className = computed(() => ({
   background-color: $black;
   color: $white;
   position: relative;
+  align-items: center;
+  img {
+    height: 170%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+  }
   &__information {
-    img {
-      width: 60%;
-      max-width: rem(800);
-    }
     h3 {
       font-family: Montserrat;
       font-size: 36px;
@@ -61,7 +63,7 @@ const className = computed(() => ({
     }
 
     .Newletter__form {
-      display: flex ;
+      display: flex;
       justify-content: space-evenly;
       background-color: $white;
       border-radius: 21.5px;
