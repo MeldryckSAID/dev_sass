@@ -22,7 +22,7 @@ const className = computed(() => ({
       <p class="Newletter__text">{{ paragraphe }}</p>
       <div class="Newletter__form">
         <input placeholder="Type your email....." type="text" />
-        <MyButton variant="rounded">SUBCRIBE</MyButton>
+        <MyButton color="primary" tcolor="white" variant="rounded">SUBCRIBE</MyButton>
       </div>
     </div>
   </div>

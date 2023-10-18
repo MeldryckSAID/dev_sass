@@ -7,6 +7,7 @@ import MyButton from '../components/MyButton.vue'
 import MyCardsMenu from '../components/elements/cards/MyCardsMenu.vue'
 import MyCards from '../components/elements/cards/MyCards.vue'
 import MyCardsPresta from '../components/elements/cards/MyCardsPresta.vue'
+import MyNewsletter from '../components/elements/MyNewsletter.vue'
 import MyIcon from '../components/elements/icons/MyIcon.vue'
 </script>
 
@@ -77,8 +78,17 @@ import MyIcon from '../components/elements/icons/MyIcon.vue'
     <MyCardsPresta />
   </section>
 
+  <section class="section__6">
+    <MyNewsletter
+      imageSrc="/public/burger.png"
+      imageAlt="Image aléchante d'un burger"
+      title="Subcribe To Our Newsletter"
+      paragraphe="Lorem ipsum dolor sit amet, consectetur adipidrscing elit. Purus mauris sem sed urna venenatis vivamus. Egestas in velit nulla viverra turpis id ac. Amet faucibus tempus."
+    />
+  </section>
+
   <footer>
-    <MyFooter/>
+    <MyFooter />
   </footer>
 </template>
 
