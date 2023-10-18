@@ -11,6 +11,7 @@ import IconFavori from '../icons/IconFavori.vue'
 import IconMenuOpen from '../icons/IconMenuOpen.vue'
 import IconMenuClose from '../icons/IconMenuClose.vue'
 import IconNext from '../icons/IconNext.vue'
+import IconPlay from '../icons/IconPlay.vue'
 
 const props = defineProps({
   name: String,
@@ -43,6 +44,8 @@ const getIcon = computed(() => {
     return IconNext
   case 'Menu open':
     return IconMenuOpen
+  case 'Play':
+    return IconPlay
 
   default:
     return IconArrowR
@@ -55,7 +58,7 @@ const className = computed(() => ({
   ' -white': props.color === 'white',
   ' -secondary': props.color === 'secondary',
   ' -cnone': props.color === 'none',
-  
+
   ' -sblack': props.stroke === 'black',
   ' -sprimary': props.stroke === 'primary',
   ' -swhite': props.stroke === 'white',
@@ -69,7 +72,8 @@ const className = computed(() => ({
 
   ' -fyellow': props.fill === 'yellow',
   ' -fblack': props.fill === 'black',
-  ' -fsans': props.fill === 'base'
+  ' -fsans': props.fill === 'base',
+  ' -fprimary': props.fill === 'primary'
 }))
 </script>
 
@@ -119,6 +123,9 @@ const className = computed(() => ({
   &-.fsans {
     fill: none;
   }
+  &.-fprimary {
+    background: #f48e28;
+  }
 
   //stroke
 
@@ -141,7 +148,7 @@ const className = computed(() => ({
     color: none;
   }
 
-&.-small {
+  &.-small {
     svg {
       scale: 0.5;
     }

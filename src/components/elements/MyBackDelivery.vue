@@ -1,15 +1,9 @@
 <script setup>
-import { computed } from 'vue'
-
-const props = defineProps({
+defineProps({
   imageAlt: String,
   imageSrc: String,
   text_Back: String
 })
-
-const className = computed(() => ({
-  ' -small': props.text_Back === 'small'
-}))
 </script>
 <template>
   <div class="back_delivery" :class="className">
@@ -23,6 +17,7 @@ const className = computed(() => ({
 .back_delivery {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   background-color: $secondary-color;
   width: 270px;
   height: 63px;
@@ -32,6 +27,7 @@ const className = computed(() => ({
     color: $primary-color;
     font-family: Montserrat;
     text-align: start;
+    font-weight: 600;
   }
   .elipse {
     display: flex;

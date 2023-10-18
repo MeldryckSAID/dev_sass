@@ -17,12 +17,13 @@ export default {
         'Favori',
         'Next',
         'Menu close',
-        'Menu open'
+        'Menu open',
+        'Play'
       ]
     },
     color: {
       control: 'select',
-      options: ['base', 'primary', 'secondary', 'black', 'white','none']
+      options: ['base', 'primary', 'secondary', 'black', 'white', 'none']
     },
     stroke: {
       control: 'select',
@@ -34,7 +35,7 @@ export default {
     },
     fill: {
       control: 'select',
-      options: ['base', 'yellow', 'black']
+      options: ['base', 'yellow', 'black', 'primary']
     }
   }
 }
