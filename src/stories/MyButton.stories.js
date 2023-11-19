@@ -15,8 +15,19 @@ export default {
       control: 'select',
       options: ['default', 'rounded']
     },
-    Icon: {
+    color: {
+      control: 'select',
+      options: ['black', 'primary', 'secondary', 'white', 'linear', 'none']
+    },
+    Iconr: {
       control: 'boolean'
+    },
+    Iconl: {
+      control: 'boolean'
+    },
+    tcolor: {
+      control: 'select',
+      options: ['black', 'white']
     }
   }
 }
@@ -49,6 +60,16 @@ export const ThirdButton = {
   ...PrimaryButton,
   args: {
     size: 'small',
-    variant: 'rounded'
+    variant: 'rounded',
+    icon: 'true'
+  }
+}
+export const FourdButton = {
+  ...PrimaryButton,
+  args: {
+    size: 'default',
+    variant: 'rounded',
+    iconl: 'true'
+    
   }
 }

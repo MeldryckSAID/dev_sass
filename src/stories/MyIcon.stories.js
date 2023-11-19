@@ -14,12 +14,16 @@ export default {
         'Clock',
         'Localisation',
         'Call',
-        'Favori'
+        'Favori',
+        'Next',
+        'Menu close',
+        'Menu open',
+        'Play'
       ]
     },
     color: {
       control: 'select',
-      options: ['base', 'primary', 'secondary', 'black', 'white']
+      options: ['base', 'primary', 'secondary', 'black', 'white', 'none']
     },
     stroke: {
       control: 'select',
@@ -28,6 +32,10 @@ export default {
     size: {
       control: 'select',
       options: ['small', 'regular', 'big']
+    },
+    fill: {
+      control: 'select',
+      options: ['base', 'yellow', 'black', 'primary']
     }
   }
 }
