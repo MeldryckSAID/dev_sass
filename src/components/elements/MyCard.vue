@@ -111,13 +111,15 @@ const className = computed(() => ({
     border-radius: rem(30);
     border: rem(2) solid $gray;
     height: 367px;
+    background-color: $white;
 
     .card__image {
       margin-top: rem(-75);
 
       img {
-        width: 90%;
-        padding: 0em;
+       
+        object-fit: cover;
+        max-width: rem(485);
       }
     }
     .card__icon {

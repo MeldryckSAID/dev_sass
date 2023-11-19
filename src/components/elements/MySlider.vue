@@ -46,7 +46,6 @@ defineProps({
   justify-content: center;
   border-radius: 30px;
   border-bottom: 1px solid black;
-  
   width: 723px;
   height: 445px;
 

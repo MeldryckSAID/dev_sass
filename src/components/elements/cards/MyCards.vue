@@ -102,7 +102,7 @@ const cards = reactive(response)
 <style lang="scss" scoped>
 .cards {
   display: grid;
-  gap: 6.25rem;
+  gap: 7.25rem;
   grid-template-columns: repeat(3, 1fr);
 }
 </style>

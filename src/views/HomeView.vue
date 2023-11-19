@@ -8,6 +8,7 @@ import MyCardsMenu from '../components/elements/cards/MyCardsMenu.vue'
 import MyCards from '../components/elements/cards/MyCards.vue'
 import MyCardsPresta from '../components/elements/cards/MyCardsPresta.vue'
 import MyNewsletter from '../components/elements/MyNewsletter.vue'
+import MySlider from '../components/elements/MySlider.vue'
 import MyIcon from '../components/elements/icons/MyIcon.vue'
 </script>
 
@@ -78,6 +79,16 @@ import MyIcon from '../components/elements/icons/MyIcon.vue'
     <MyCardsPresta />
   </section>
 
+  <section class="section__5">
+    <MySlider
+      imageSrc="/public/wili.png"
+      imageAlt="Avis users"
+      people="Willians Jhone"
+      grade="CEO & Co-Founder"
+      avis="“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl tincidunt adipiscing dictumst blandit hac. Lectus cras velit sed dignissim ac, aliquet. Metus egestas habitant feugiat neque ultrices nunc, dolor egestas mus.”"
+    />
+    <img src="../../public/appe.png" alt="nouritures apétissante" />
+  </section>
   <section class="section__6">
     <MyNewsletter
       imageSrc="/public/burger.png"
@@ -116,6 +127,12 @@ p {
   .section_left {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+  .section_rigth {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(200deg, #d9d9d9 -18.39%, rgba(217, 217, 217, 0) 89.51%);
+    border-radius: 3%;
   }
 }
 .aside_part {
@@ -172,5 +189,19 @@ p {
   .section__button {
     padding: 1%;
   }
+}
+
+.section__5 {
+  display: flex;
+  justify-content: center;
+}
+
+.section__6 {
+  display: flex;
+  justify-content: center;
+}
+.section__5,
+.section__6 {
+  padding: 5%;
 }
 </style>

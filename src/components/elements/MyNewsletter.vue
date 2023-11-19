@@ -32,7 +32,7 @@ const className = computed(() => ({
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 1560px;
+  width: 1260px;
   height: 369px;
   border-radius: 31.5px;
   background-color: $black;
